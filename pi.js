@@ -1,5 +1,11 @@
 const canvas = document.getElementById("piCanvas");
 const ctx = canvas.getContext("2d");
+
+var piOutput = document.getElementById("piValue");
+var n_circ = document.getElementById("Ncirc");
+var n_total = document.getElementById("Ntotal");
+
+
 var points_in_cirlce = 0;
 var points_in_total = 0;
 
@@ -39,9 +45,14 @@ function throw_points(n){
 }
 
 function main(){
-	throw_points(500); //throw n random points at a time
+	throw_points(100); //throw n random points at a time
 
-	console.log(4*points_in_cirlce/points_in_total);
+	var pi = 4*points_in_cirlce/points_in_total;
+
+	n_circ.innerHTML = "Ncirc = " + points_in_cirlce;
+	n_total.innerHTML = "Ntotal = " + points_in_total;
+	piOutput.innerHTML = "&pi; = " + pi;
+
 }
 
 drawBackground();
