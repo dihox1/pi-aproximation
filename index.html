@@ -5,6 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pi</title>
 	<link rel="stylesheet" type="text/css" href="pi.css">
+
+
+	<!-- MathJax for representing formulas -->
+	<!-- TEX notation -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head>
 <body>
 	<canvas class = "box" id = "piCanvas" width="500" height="500">
@@ -20,9 +29,9 @@
 			I stumbled on this method while surfing youtube <a href = "https://www.youtube.com/watch?v=FYQA2ozutTQ">(source)</a>.</p>
 		
 		<p>
-			What we have here is a circle inscribed in a square. The area of the square is A_sqr = Lenght * Length = 4* Radius * Radius;
-			While the area of the circle is A_circ = &pi; * Radius * Radius.
-			If we divide A_circ/A_sqr = &pi;/4 Or &pi; = 4 * A_circ/A_sqr.
+			What we have here is a circle inscribed in a square. The area of the square is \(A_{sqr} = Length^2 = 4R^2\);
+			While the area of the circle is \(A_{circ} = {\pi}R^2\).
+			If we divide \(\frac{A_{circ}}{A_{sqr}} = \frac{\pi}{4}\) Or \( \pi = 4\frac{A_{circ}}{A_{sqr}} \).
 			The next thing to understand is that when we keep generating random points we start filling the Area !!!</p>
 
 		<p>
@@ -30,7 +39,7 @@
 			Each point is checked it hits the circle (Ncirc = points inside the circle).</p>
 		
 		<p>
-			All it's left to do is to calculate &pi; = 4 * A_circ/A_sqr = 4 * Ncirc/Ntotal
+			All it's left to do is to calculate \(\pi = 4\frac{A_{circ}}{A_{sqr}} = 4\frac{N{circ}}{N{total}}\)
 		</p>
 	</div>
 
